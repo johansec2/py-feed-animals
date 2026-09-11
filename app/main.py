@@ -4,7 +4,9 @@
 class Animal:
     """Base class representing an animal that can eat."""
 
-    def __init__(self, name: str, appetite: int, is_hungry: bool = True) -> None:
+    def __init__(
+        self, name: str, appetite: int, is_hungry: bool = True
+    ) -> None:
         """Initialize the animal with name, appetite, and hunger status.
 
         Args:
