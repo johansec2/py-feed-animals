@@ -39,16 +39,9 @@ class Cat(Animal):
     """Cat class inheriting from Animal with fixed appetite of 3."""
 
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        """Initialize the cat.
-
-        Args:
-            name (str): The name of the cat.
-            is_hungry (bool): Whether the cat is hungry. Defaults to True.
-        """
         super().__init__(name, 3, is_hungry)
 
     def catch_mouse(self) -> None:
-        """Simulate catching a mouse."""
         print("The hunt began!")
 
 
@@ -56,16 +49,9 @@ class Dog(Animal):
     """Dog class inheriting from Animal with fixed appetite of 7."""
 
     def __init__(self, name: str, is_hungry: bool = True) -> None:
-        """Initialize the dog.
-
-        Args:
-            name (str): The name of the dog.
-            is_hungry (bool): Whether the dog is hungry. Defaults to True.
-        """
         super().__init__(name, 7, is_hungry)
 
     def bring_slippers(self) -> None:
-        """Simulate bringing slippers."""
         print("The slippers delivered!")
 
 
@@ -78,7 +64,4 @@ def feed_animals(animals_list: list[Animal]) -> int:
     Returns:
         int: Total food points eaten by all hungry animals.
     """
-    total_food_points = 0
-    for animal in animals_list:
-        total_food_points += animal.feed()
-    return total_food_points
+    return sum(animal.feed() for animal in animals_list)
