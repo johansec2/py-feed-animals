@@ -80,4 +80,3 @@ def feed_animals(animals_list: list[Animal]) -> int:
     for animal in animals_list:
         total_food_points += animal.feed()
     return total_food_points
-
